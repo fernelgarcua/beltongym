@@ -1,0 +1,28 @@
+{
+  "name": "gym",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernelgarcua/beltongym.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernelgarcua/beltongym/issues"
+  },
+  "homepage": "https://github.com/fernelgarcua/beltongym#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20",
+    "prompt-sync": "^4.2.0"
+  }
+}

@@ -1,0 +1,13 @@
+<h1>BIENVENIDO PUTOS {{{name}}} tu edad es {{{age}}}</h1>
+<p>Se van a registrar usuarios</p>
+
+<ul>
+    {{#each users}}
+        <details>
+            <summary>{{{name}}}</summary>
+            <p>edad: {{{age}}}</p>
+            <p>telefono: {{{phone}}}</p>
+            <p>correo: {{{email}}}</p>
+        </details>
+    {{/each}}
+</ul>
