@@ -1,8 +1,16 @@
 <form action="/user/create" method="post">
     <label for="">
-        Nombre
+        Nombres
         <input type="text" name="name">
     </label>
+    <label for="">
+        Apellidos
+        <input type="text" name="lastname">
+    </label>
+    <label>
+        Cumpleaños
+        <input type="date" name="bday" />
+  </label>
     <label for="">
         edad
         <input type="number" name="age">
@@ -14,6 +22,24 @@
     <label for="">
         Correo
         <input type="email" name="email">
+    </label>
+    <label for="">
+        Plan
+        <select name="plan" id="">
+            <option  value="clase">clase</option>
+            <option  value="semana">semanal</option>
+            <option  value="mes" selected>mensual</option>
+            <option  value="año">anual</option>
+            <option  value="tiquetera">tiquetera</option>
+        </select>
+    </label>
+    <label for="">
+        Fecha de inicio
+        <input type="date" name="dateinit" min="datetime-local">
+    </label>
+    <label for="">
+        Fecha de culminacion
+        <input type="date" name="dateend" min="datetime-local">
     </label>
     <button>Submit</button>
 </form>

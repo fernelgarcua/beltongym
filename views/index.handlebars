@@ -1,13 +1,44 @@
-<h1>BIENVENIDO PUTOS {{{name}}} tu edad es {{{age}}}</h1>
+<h1>BIENVENIDO</h1>
 <p>Se van a registrar usuarios</p>
 
 <ul>
     {{#each users}}
         <details>
-            <summary>{{{name}}}</summary>
+            <summary>{{{name}}} {{{lastname}}}</summary>
+            <p>Fecha de nacimiento: {{{bday}}}</p>
             <p>edad: {{{age}}}</p>
             <p>telefono: {{{phone}}}</p>
             <p>correo: {{{email}}}</p>
+            <p>plan: {{{plan}}}</p>
+            <p>fecha inicio: {{{dateinit}}}</p>
+            <p>fecha final: {{{dateend}}}</p>
         </details>
+
+        <form class="delete-form">
+            <input type="hidden" name="id" value="{{{id}}}">
+            <button class="btn_delete">ELIMINAR</button>
+        </form>
     {{/each}}
+    <script>
+        const deleteForm = document.getElementsByClassName('delete-form')
+
+        for(let i= 0 ; i < deleteForm.length ; i++){
+            deleteForm[i].addEventListener('submit', event =>{
+                event.preventDefault()
+                const id = deleteForm[i][0].value
+
+                console.log(id)
+                fetch(`/user/delete/${id}`, {
+                    method: 'DELETE'
+                }).then(response =>{
+                    if(response.status===200){
+                        window.location.href ='/'
+                    }
+                })
+                })
+                
+            
+        }
+        
+    </script>
 </ul>
